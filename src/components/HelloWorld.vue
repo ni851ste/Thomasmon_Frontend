@@ -1,5 +1,7 @@
 <template>
     <div class="hello">
+        <img alt="Vue logo" src="../assets/chrischi_ico.png">
+
         <h1>{{ msg }}</h1>
         <p>
             For a guide and recipes on how to configure / customize this project,<br>
@@ -61,5 +63,10 @@
 
     a {
         color: #42b983;
+    }
+
+    .hello {
+        text-align: center;
+        margin-top: 3em;
     }
 </style>

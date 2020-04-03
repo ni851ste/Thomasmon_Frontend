@@ -1,28 +1,30 @@
 <template>
     <div id="app">
-        <img alt="Vue logo" src="./assets/logo.png">
-        <HelloWorld msg="Welcome to Your Vue.js App"/>
+        <NavBar/>
+        <CenteredContent/>
     </div>
 </template>
 
 <script>
     import HelloWorld from './components/HelloWorld.vue'
+    import NavBar from "./components/general/NavBar";
+    import CenteredContent from "./components/general/CenteredContent";
 
     export default {
         name: 'App',
         components: {
-            HelloWorld
+            NavBar,
+            CenteredContent
         }
     }
 </script>
 
 <style>
-    #app {
-        font-family: Avenir, Helvetica, Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-align: center;
-        color: #2c3e50;
-        margin-top: 60px;
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #232323;
+
+        color: white;
     }
 </style>
