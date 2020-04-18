@@ -1,28 +1,53 @@
 <template>
     <div id="main-content-body">
-        <div id="centered-content">
-            <ScrollableContent/>
-            <SideContent/>
-        </div>
+
+        <template v-if="index === 0">
+            <div class="centered-content">
+                <ScrollableContent/>
+                <SideContent/>
+            </div>
+        </template>
+        <template v-else-if="index === 1">
+            <div class="centered-content">
+                <div id="tgs-game-picker">
+                    <h1>TGS Game Picker</h1>
+                    <div id="tgs-frame">
+                        <TgsGameList/>
+                        <TgsRollConfig/>
+                        <TgsPickedGames/>
+                    </div>
+                </div>
+            </div>
+        </template>
+
     </div>
 </template>
 
 <script>
     import ScrollableContent from "../home/ScrollableContent";
     import SideContent from "../home/SideContent";
+    import TgsGameList from "../tgs-game-picker/TgsGameList";
+    import TgsRollConfig from "../tgs-game-picker/TgsRollConfig";
+    import TgsPickedGames from "../tgs-game-picker/TgsPickedGames";
 
     export default {
         name: "CenteredContent",
         components: {
+            TgsPickedGames,
+            TgsRollConfig,
+            TgsGameList,
             ScrollableContent,
             SideContent
+        },
+        props: {
+            index: Number
         }
     }
 </script>
 
 <style scoped>
     @media (max-width: 1024px) {
-        #centered-content {
+        .centered-content {
             display: block;
 
             color: white;
@@ -36,7 +61,7 @@
     }
 
     @media (min-width: 1024px) {
-        #centered-content {
+        .centered-content {
             display: flex;
 
             width: 100%;
@@ -50,7 +75,7 @@
         box-sizing: border-box;
     }
 
-    #centered-content {
+    .centered-content {
         vertical-align: baseline;
         justify-content: center;
 

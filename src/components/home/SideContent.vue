@@ -5,12 +5,13 @@
                     frameborder="<frameborder>"
                     id="twitch-embed" scrolling="false"
                     src="https://player.twitch.tv/?channel=jaronthekid&amp;parent=streamernews.example.com"
-                    style="width: 307px; height: 174px;"></iframe>
+                    style="width: 100%; height: 173px;"></iframe>
             <p>This is the side content</p>
             <p>
                 <button class="own-button-big" id="add-chr-btn" type="button">ADD CHRISHURT</button>
             </p>
-            <img alt="Chrishi" src="/assets/images/chrischi_gobnik.png"></div>
+            <img alt="Vue logo" src="../../assets/chrischi_squad.png">
+        </div>
     </div>
 </template>
 

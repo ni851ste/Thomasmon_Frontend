@@ -1,30 +1,21 @@
 <template>
     <div id="app">
-        <NavBar/>
-        <CenteredContent/>
+        <router-view>view</router-view>
     </div>
 </template>
 
 <script>
-    import HelloWorld from './components/HelloWorld.vue'
-    import NavBar from "./components/general/NavBar";
-    import CenteredContent from "./components/general/CenteredContent";
-
     export default {
-        name: 'App',
-        components: {
-            NavBar,
-            CenteredContent
-        }
+        name: 'App'
     }
 </script>
 
 <style>
-    body {
-        margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        background-color: #232323;
+    a:visited {
+        color: #288700;
+    }
 
-        color: white;
+    a {
+        color: #44E500;
     }
 </style>

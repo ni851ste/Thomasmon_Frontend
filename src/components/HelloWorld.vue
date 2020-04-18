@@ -1,6 +1,6 @@
 <template>
     <div class="hello">
-        <img alt="Vue logo" src="../assets/chrischi_ico.png">
+        <img alt="Vue logo" src="../assets/chrischi_squad.png">
 
         <h1>{{ msg }}</h1>
         <p>
@@ -59,10 +59,6 @@
     li {
         display: inline-block;
         margin: 0 10px;
-    }
-
-    a {
-        color: #42b983;
     }
 
     .hello {

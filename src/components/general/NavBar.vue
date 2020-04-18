@@ -1,17 +1,26 @@
 <template>
     <div class="topnav">
         <div class="topnav-container">
-            <a class="active" id="top-nav-home">Home</a>
+            <div v-if="activeIndex === 0">
+                <a class="active" href="/">Home</a>
+                <a href="/game">TGS Game Picker</a>
+            </div>
+            <div v-else-if="activeIndex === 1">
+                <a href="/">Home</a>
+                <a class="active" href="/game">TGS Game Picker</a>
+            </div>
             <!--a id="top-nav-game">Game</a-->
             <!--a id="top-nav-jtk">JaronTheKid</a-->
-            <a id="top-nav-tgs">TGS Game Picker</a>
         </div>
     </div>
 </template>
 
 <script>
     export default {
-        name: "NavBar"
+        name: "NavBar",
+        props: {
+            activeIndex: Number
+        }
     }
 </script>
 
@@ -44,10 +53,6 @@
             text-decoration: none;
             font-size: 17px;
         }
-    }
-
-    a:visited {
-        color: #3DCC00;
     }
 
     .topnav {
